@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LightLayer
+comment0.text=\r\n\ LightLayer\ class\ to\ create\ a\ circular\ flashlight\ effect.\r\n
+comment1.params=worldWidth\ worldHeight
+comment1.target=LightLayer(int,\ int)
+comment2.params=x\ y\ direction
+comment2.target=void\ updateLight(int,\ int,\ int)
+numComments=3

@@ -9,21 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MazeWorld extends World
 {
 
-    /**
-     * Constructor for objects of class Maze.
-     * 
-     */
+    private LightLayer lightLayer;
     public MazeWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
         prepare();
+        lightLayer = new LightLayer(getWidth(), getHeight());
+        addObject(lightLayer, getWidth() / 2, getHeight() / 2);
     }
     
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
+    public void updateLight(int x, int y, int direction)
+    {
+        lightLayer.updateLight(x, y, direction);
+    }
     private void prepare()
     {
         Walls walls = new Walls();
@@ -185,5 +184,9 @@ public class MazeWorld extends World
         addObject(walls76,598,98);
         Player player = new Player();
         addObject(player,99,573);
+        enemy enemy = new enemy();
+        addObject(enemy,393,221);
+        enemy enemy2 = new enemy();
+        addObject(enemy2,234,477);
     }
 }

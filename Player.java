@@ -13,10 +13,23 @@ public class Player extends Movers
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Player() {
-        getImage().scale(getImage().getWidth(), getImage().getHeight());
+        getImage().scale(getImage().getWidth(), getImage().getHeight());        
     }
     public void act()
     {
-        moveAround();
+        moveAround();    
+        updateFlashlight();
+        
+    }
+    
+    private void updateFlashlight()
+    {
+        // Get player position and rotation
+        int x = getX();
+        int y = getY();
+        int direction = getRotation();
+
+        // Update the light layer through the world
+        ((MazeWorld) getWorld()).updateLight(x, y, direction);
     }
 }
