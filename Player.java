@@ -17,19 +17,10 @@ public class Player extends Movers
     }
     public void act()
     {
-        moveAround();    
-        updateFlashlight();
+        moveAround();   
+        
         
     }
     
-    private void updateFlashlight()
-    {
-        // Get player position and rotation
-        int x = getX();
-        int y = getY();
-        int direction = getRotation();
-
-        // Update the light layer through the world
-        ((MazeWorld) getWorld()).updateLight(x, y, direction);
-    }
+    
 }

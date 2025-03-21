@@ -1,8 +1,22 @@
 #BlueJ class context
 comment0.target=LightLayer
 comment0.text=\r\n\ LightLayer\ class\ to\ create\ a\ circular\ flashlight\ effect.\r\n
-comment1.params=worldWidth\ worldHeight
-comment1.target=LightLayer(int,\ int)
-comment2.params=x\ y\ direction
-comment2.target=void\ updateLight(int,\ int,\ int)
-numComments=3
+comment1.params=actor\ radius
+comment1.target=LightLayer(greenfoot.Actor,\ int)
+comment2.params=
+comment2.target=void\ updateImage()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=radius
+comment4.target=void\ setRadius(int)
+comment4.text=\r\n\ Set\ the\ light\ radius\ (size\ of\ the\ transparent\ circle).\r\n
+comment5.params=transparency
+comment5.target=void\ setDarkness(int)
+comment5.text=\r\n\ Set\ the\ darkness\ transparency\ level.\r\n
+comment6.params=color
+comment6.target=void\ setDarkColor(greenfoot.Color)
+comment6.text=\r\n\ Set\ the\ darkness\ color.\r\n
+comment7.params=color
+comment7.target=void\ setLightColor(greenfoot.Color)
+comment7.text=\r\n\ Set\ the\ light\ color\ (transparency\ color).\r\n
+numComments=8

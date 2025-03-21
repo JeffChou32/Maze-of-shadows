@@ -15,16 +15,14 @@ public class MazeWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
         prepare();
-        lightLayer = new LightLayer(getWidth(), getHeight());
-        addObject(lightLayer, getWidth() / 2, getHeight() / 2);
+        
+        
     }
     
-    public void updateLight(int x, int y, int direction)
-    {
-        lightLayer.updateLight(x, y, direction);
-    }
+    
     private void prepare()
     {
+        
         Walls walls = new Walls();
         addObject(walls,2*50,11*50);
         Walls walls2 = new Walls();
@@ -188,5 +186,10 @@ public class MazeWorld extends World
         addObject(enemy,393,221);
         enemy enemy2 = new enemy();
         addObject(enemy2,234,477);
+        lightLayer = new LightLayer(player, 150);  // 150 radius
+        addObject(lightLayer, player.getX(), player.getY());
+
+        // Set paint order to show the player over the light
+        setPaintOrder(Player.class, LightLayer.class);
     }
 }
